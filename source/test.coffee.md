@@ -4,7 +4,7 @@ Export `TestRunner` object.
 
 Run tests in a sandboxed window
 
-      launch: (testCode, options={}) ->
+      launch: (testScripts, options={}) ->
         config = Object.reverseMerge {}, options,
           width: 800
           height: 600
@@ -21,7 +21,7 @@ Run tests in a sandboxed window
             <script src="http://strd6.github.io/tests/assert.js"><\/script>
             <script src="http://strd6.github.io/tests/mocha.js"><\/script>
             <script>mocha.setup('bdd')<\/script>
-            <script>#{testCode}<\/script>
+            #{testScripts}
             <script>
               mocha.checkLeaks();
               mocha.globals(['jQuery']);
