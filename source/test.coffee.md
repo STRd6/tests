@@ -14,11 +14,14 @@ Run tests in a sandboxed window
         </head>
         <body>
           <div id="mocha"></div>
+          <script src="//code.jquery.com/jquery-1.10.1.min.js"><\/script>
           <script src="http://strd6.github.io/tests/assert.js"><\/script>
           <script src="http://strd6.github.io/tests/mocha.js"><\/script>
           <script>mocha.setup('bdd')<\/script>
           <script>#{testCode}<\/script>
           <script>
+            mocha.checkLeaks();
+            mocha.globals(['jQuery']);
             mocha.run();
           <\/script>
         </body>

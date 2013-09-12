@@ -4,6 +4,9 @@ $('body').append(
     run: ->
       Test(CoffeeScript.compile """
         describe "test", ->
-          assert true
+          it "sholud be bad ass", ->
+            assert true
+            
+            console.log "radical"
       """)
 )
