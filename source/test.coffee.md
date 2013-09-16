@@ -3,7 +3,7 @@
 
 Generate an html template that runs the given script tag strings as tests.
       
-      html: = (testScripts) -> """
+      html: (testScripts) -> """
         <html>
         <head>
           <meta charset="utf-8">
