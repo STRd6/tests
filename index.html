@@ -4,12 +4,50 @@
 <script class="env" src="//cdnjs.cloudflare.com/ajax/libs/coffee-script/1.6.3/coffee-script.min.js"></script>
 <script class="env" src="//code.jquery.com/jquery-1.10.1.min.js"></script>
 <script class="env" src="//d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js"></script>
-<script class="env" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
 <script class="env" src="http://strd6.github.io/tempest/javascripts/envweb.js"></script>
 <script class="env" src="http://strd6.github.io/sandbox/master.js"></script>
-<script class="env" src="http://strd6.github.io/issues/master.js"></script>
+<script class="env" src="http://strd6.github.io/tests/master.js"></script>
+<script class="env" src="http://strd6.github.io/require/master.js?01"></script>
 </head>
 <body>
-<script src="master.js?1379021253726"></script>
+<script>ENV = {
+  "source": {
+    "README.md": {
+      "path": "README.md",
+      "mode": "100644",
+      "content": "tests\n=====\n\nProvide tests to online editor\n",
+      "type": "blob"
+    },
+    "TODO": {
+      "path": "TODO",
+      "mode": "100644",
+      "content": "Investigate Leak Checking\n",
+      "type": "blob"
+    },
+    "main.coffee.md": {
+      "path": "main.coffee.md",
+      "mode": "100644",
+      "content": "\n    module.exports = \n\nGenerate an html template that runs the given script tag strings as tests.\n      \n      html: (testScripts) -> \"\"\"\n        \n        \n          <meta charset="\&quot;utf-8\&quot;">\n          <title>Mocha Tests</title>\n          <link rel="\&quot;stylesheet\&quot;" href="\&quot;http://strd6.github.io/tests/mocha.css\&quot;">\n        \n        \n          <div id="\&quot;mocha\&quot;"></div>\n          <script src="\&quot;http://strd6.github.io/tests/assert.js\&quot;"><\\/script>\n          <script src=\"http://strd6.github.io/tests/mocha.js\"><\\/script>\n          <script>mocha.setup('bdd')<\\/script>\n          #{testScripts}\n          <script>\n            mocha.checkLeaks();\n            mocha.globals(['jQuery']);\n            mocha.run();\n          <\\/script>\n        </body>\n        </html>\n      \"\"\"\n",
+      "type": "blob"
+    }
+  },
+  "distribution": {
+    "main": {
+      "path": "main",
+      "content": "(function() {\n  module.exports = {\n    html: function(testScripts) {\n      return \"<html>\\n<head>\\n  <meta charset=\\\"utf-8\\\">\\n  <title>Mocha Tests</title>\\n  <link rel=\\\"stylesheet\\\" href=\\\"http://strd6.github.io/tests/mocha.css\\\" />\\n</head>\\n<body>\\n  <div id=\\\"mocha\\\"></div>\\n  <script src=\\\"http://strd6.github.io/tests/assert.js\\\"><\\/script>\\n  <script src=\\\"http://strd6.github.io/tests/mocha.js\\\"><\\/script>\\n  <script>mocha.setup('bdd')<\\/script>\\n  \" + testScripts + \"\\n  <script>\\n    mocha.checkLeaks();\\n    mocha.globals(['jQuery']);\\n    mocha.run();\\n  <\\/script>\\n</body>\\n</html>\";\n    }\n  };\n\n}).call(this);\n",
+      "type": "blob"
+    }
+  },
+  "entryPoint": "main",
+  "dependencies": {},
+  "repository": {
+    "full_name": "STRd6/tests",
+    "branch": "master"
+  },
+  "progenitor": {
+    "url": "http://strd6.github.io/editor/"
+  }
+};</script></script>
+<script>require('./main')</script>
 </body>
 </html>
