@@ -1,8 +1,8 @@
 
-    module.exports = 
+    module.exports =
 
 Generate an html template that runs the given script tag strings as tests.
-      
+
       html: (testScripts) -> """
         <html>
         <head>
