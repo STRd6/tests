@@ -1797,9 +1797,9 @@ exports.colors = {
  */
 
 exports.symbols = {
-  ok: '✓',
-  err: '✖',
-  dot: '․'
+  ok: '\u2714',
+  err: '\u274C',
+  dot: '.'
 };
 
 // With node.js on Windows: use symbols available in terminal default fonts
