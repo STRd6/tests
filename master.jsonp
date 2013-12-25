@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html manifest="manifest.appcache?1381181369585">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-</head>
-<body>
-<script>
-;(function(PACKAGE) {
-var require = Require.generateFor(PACKAGE);
-require('./main')
-})({
+window["STRd6/tests:master"]({
   "version": "0.1.0",
   "source": {
     "README.md": {
@@ -151,6 +140,3 @@ require('./main')
     "url": "http://strd6.github.io/editor/"
   }
 });
-</script>
-</body>
-</html>
