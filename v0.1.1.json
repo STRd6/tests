@@ -154,7 +154,7 @@
     },
     "network_count": 0,
     "subscribers_count": 1,
-    "branch": "master",
+    "branch": "v0.1.1",
     "publishBranch": "gh-pages"
   },
   "dependencies": {}
